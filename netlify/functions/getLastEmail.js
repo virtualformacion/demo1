@@ -15,9 +15,9 @@ const IMAP_CONFIG = {
     host: "imap.gmail.com",
     port: 993,
     tls: true,
-    authTimeout: 10000,
-  },
-  onerror: (err) => console.error("IMAP ERROR:", err)
+    tlsOptions: { rejectUnauthorized: false }, // 💡 Solución al error SSL
+    authTimeout: 10000
+  }
 };
 
 const disneySubjects = [
