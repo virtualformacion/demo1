@@ -15,7 +15,7 @@ const IMAP_CONFIG = {
     host: "imap.gmail.com",
     port: 993,
     tls: true,
-    authTimeout: 3000,
+    authTimeout: 10000,
   },
   onerror: (err) => console.error("IMAP ERROR:", err)
 };
