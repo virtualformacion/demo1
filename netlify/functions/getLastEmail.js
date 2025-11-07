@@ -23,6 +23,7 @@ const IMAP_CONFIG = {
 const disneySubjects = [
   "amazon.com: Sign-in attempt",
   "Your one-time passcode for Disney+",
+  "Netflix: Tu código de inicio de sesión",
   "Tu código de acceso único para Disney+"
 ];
 
