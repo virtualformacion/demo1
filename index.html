@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEMO</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Vincula el archivo de estilos CSS -->
+    <style>
+        /* Nuevo estilo para el contenedor del mensaje de Disney+ */
+        .message-container {
+            display: none; /* Oculto por defecto */
+            position: fixed; /* Para que cubra toda la pantalla */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+            color: white;
+            padding: 20px;
+            overflow: auto; /* Permite el desplazamiento */
+            font-size: 16px;
+            z-index: 9999; /* Asegura que se muestre por encima de todo */
+            max-height: 100vh; /* Asegura que el contenedor no se salga de la pantalla */
+            overflow-y: auto; /* Habilita el desplazamiento vertical */
+        }
+
+        /* Estilo adicional para los botones */
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff4747;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Obtener Códigos</h1>
+        <form id="emailForm">
+            <input type="email" id="email" placeholder="Introduce tu correo" required class="email-input">
+            <button type="submit" class="submit-button">Obtener Código</button>
+        </form>
+    </div>
+
+    <!-- Contenedor para mostrar el cuerpo del mensaje completo -->
+    <div id="messageModal" class="message-container">
+        <button class="close-button" id="closeModal">Cerrar</button>
+        <div id="messageBody"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

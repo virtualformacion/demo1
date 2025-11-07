@@ -1,0 +1,17 @@
+{
+  "name": "demo-main",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "imap-simple": "^5.1.0",
+    "mailparser": "^3.9.0"
+  }
+}

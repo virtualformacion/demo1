@@ -1,0 +1,91 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo global */
+body {
+    font-family: 'Arial', sans-serif;
+
+    /* Fondo compuesto: capa oscura + fondo.jpg detrás, logo.jpg encima */
+    background-image:
+        url('logo.jpg'), /* logo visible en el centro */
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* capa oscura */
+        url('fondo.jpg'); /* fondo general reemplazando el negro sólido */
+    
+    background-size:
+        contain,   /* logo.jpg */
+        cover,     /* capa oscura (cubre todo) */
+        cover;     /* fondo.jpg */
+
+    background-position:
+        center,    /* logo.jpg */
+        center,    /* capa oscura */
+        center;    /* fondo.jpg */
+
+    background-repeat:
+        no-repeat,
+        no-repeat,
+        no-repeat;
+
+    background-attachment:
+        fixed,
+        fixed,
+        fixed;
+
+    color: #fff; /* Texto blanco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Asegura que la imagen no se desborde al hacer scroll */
+}
+
+/* Contenedor principal */
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Ajuste el tamaño del contenedor */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con 50% de transparencia */
+    border-radius: 10px;
+}
+
+/* Título */
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Estilo para el input (campo de correo) */
+.email-input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white; /* Fondo blanco para el input */
+}
+
+/* Estilo para el botón */
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: red; /* Color de fondo rojo como el de Netflix */
+    color: white; /* Texto blanco */
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover en el botón */
+.submit-button:hover {
+    background-color: darkred;
+}
